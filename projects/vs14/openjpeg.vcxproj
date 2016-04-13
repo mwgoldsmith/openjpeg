@@ -185,7 +185,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;WIN32;_WINDOWS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
@@ -193,10 +193,10 @@
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblcms2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>
@@ -224,7 +224,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -244,16 +244,16 @@ ENDLOCAL
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PreprocessorDefinitions>__SSE__;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;WIN32;_WINDOWS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Lib>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblcms2d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>
@@ -281,11 +281,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -302,7 +302,7 @@ ENDLOCAL
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;WIN32;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
@@ -310,10 +310,10 @@ ENDLOCAL
     </ClCompile>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblcms2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>
@@ -341,11 +341,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -362,17 +362,17 @@ ENDLOCAL
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
       <PreprocessorDefinitions>__SSE__;OPJ_STATIC;_CRT_SECURE_NO_DEPRECATE;WIN32;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Lib>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblcms2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
       <Command>
@@ -400,11 +400,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -419,9 +419,9 @@ ENDLOCAL
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPJ_EXPORTS;WIN32;_WINDOWS;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
@@ -462,11 +462,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -481,9 +481,9 @@ ENDLOCAL
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPJ_EXPORTS;WIN32;_WINDOWS;_DEBUG;DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
@@ -523,11 +523,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -544,9 +544,9 @@ ENDLOCAL
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPJ_EXPORTS;WIN32;_WINDOWS;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
@@ -589,11 +589,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -610,9 +610,9 @@ ENDLOCAL
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\src\lib\openjp2;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);;$(OutDir)..\..\include\libcms2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>OPJ_EXPORTS;WIN32;_WINDOWS;_NDEBUG;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
@@ -654,11 +654,11 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\include\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
-COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
 ENDLOCAL
 </Command>
@@ -668,57 +668,34 @@ ENDLOCAL
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\lib\openjp2\bio.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\cio.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\dwt.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\event.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\function_list.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\image.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\indexbox_manager.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\invert.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\j2k.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\jp2.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\mct.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\mqc.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\openjpeg.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_clock.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_codec.h" />
+    <ClInclude Include="..\..\libopenjpeg\openjpeg.h" />
+    <ClInclude Include="..\..\libopenjpeg\opj_includes.h" />
     <ClInclude Include="opj_config.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_config_private.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_includes.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_intmath.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_inttypes.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_malloc.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\opj_stdint.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\pi.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\raw.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\t1.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\t1_luts.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\t2.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\tcd.h" />
-    <ClInclude Include="..\..\src\lib\openjp2\tgt.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\lib\openjp2\bio.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\cio.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\dwt.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\event.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\function_list.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\image.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\invert.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\j2k.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\jp2.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\mct.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\mqc.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\openjpeg.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\opj_clock.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\pi.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\raw.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\t1.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\t1_generate_luts.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\t2.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\tcd.c" />
-    <ClCompile Include="..\..\src\lib\openjp2\tgt.c" />
+    <ClCompile Include="..\..\libopenjpeg\bio.c" />
+    <ClCompile Include="..\..\libopenjpeg\cio.c" />
+    <ClCompile Include="..\..\libopenjpeg\dwt.c" />
+    <ClCompile Include="..\..\libopenjpeg\event.c" />
+    <ClCompile Include="..\..\libopenjpeg\image.c" />
+    <ClCompile Include="..\..\libopenjpeg\j2k.c" />
+    <ClCompile Include="..\..\libopenjpeg\j2k_lib.c" />
+    <ClCompile Include="..\..\libopenjpeg\jp2.c" />
+    <ClCompile Include="..\..\libopenjpeg\jpt.c" />
+    <ClCompile Include="..\..\libopenjpeg\mct.c" />
+    <ClCompile Include="..\..\libopenjpeg\mqc.c" />
+    <ClCompile Include="..\..\libopenjpeg\openjpeg.c" />
+    <ClCompile Include="..\..\libopenjpeg\pi.c" />
+    <ClCompile Include="..\..\libopenjpeg\raw.c" />
+    <ClCompile Include="..\..\libopenjpeg\t1.c" />
+    <ClCompile Include="..\..\libopenjpeg\t2.c" />
+    <ClCompile Include="..\..\libopenjpeg\tcd.c" />
+    <ClCompile Include="..\..\libopenjpeg\tgt.c" />
+    <ClCompile Include="..\..\libopenjpeg\cidx_manager.c" />
+    <ClCompile Include="..\..\libopenjpeg\phix_manager.c" />
+    <ClCompile Include="..\..\libopenjpeg\ppix_manager.c" />
+    <ClCompile Include="..\..\libopenjpeg\thix_manager.c" />
+    <ClCompile Include="..\..\libopenjpeg\tpix_manager.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
