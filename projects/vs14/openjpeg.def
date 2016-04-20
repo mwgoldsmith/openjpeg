@@ -1,0 +1,22 @@
+EXPORTS
+    cio_seek
+    cio_tell
+    opj_cio_close
+    opj_cio_open
+    opj_create_compress
+    opj_create_decompress
+    opj_decode
+    opj_decode_with_info
+    opj_destroy_compress
+    opj_destroy_cstr_info
+    opj_destroy_decompress
+    opj_encode
+    opj_encode_with_info
+    opj_image_create
+    opj_image_destroy
+    opj_set_default_decoder_parameters
+    opj_set_default_encoder_parameters
+    opj_set_event_mgr
+    opj_setup_decoder
+    opj_setup_encoder
+    opj_version
