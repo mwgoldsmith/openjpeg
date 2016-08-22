@@ -215,8 +215,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -224,7 +223,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -272,8 +271,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -281,7 +279,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -332,8 +330,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -341,7 +338,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -391,8 +388,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -400,7 +396,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -454,8 +450,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -463,7 +458,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -516,8 +511,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -525,7 +519,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -583,8 +577,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -592,7 +585,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
@@ -649,8 +642,7 @@ ENDLOCAL
 </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-ECHO Off
+      <Command>ECHO OFF
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
@@ -658,7 +650,7 @@ MKDIR "$(OutDir)..\..\include\$(ProjectName)"
 
 FOR %%H IN (openjpeg.h) DO (
   SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\libopenjpeg\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
 )
 
 MKDIR "$(OutDir)..\..\licenses"
