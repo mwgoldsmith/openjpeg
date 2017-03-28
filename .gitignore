@@ -40,9 +40,12 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
-*.VC.opendb
-*.VC.db
+
 .vs/
+*.VC.db
+*.opendb
+*.sdf
+*.vcxproj.user
 
 
 # Ignore directories made by `make`.
