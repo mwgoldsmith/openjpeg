@@ -200,32 +200,25 @@
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -263,32 +256,25 @@ ENDLOCAL</Command>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -326,32 +312,25 @@ ENDLOCAL</Command>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -388,32 +367,25 @@ ENDLOCAL</Command>
       <TargetMachine>MachineX64</TargetMachine>
     </Lib>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -458,32 +430,25 @@ ENDLOCAL</Command>
       </ModuleDefinitionFile>
     </Link>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -527,32 +492,25 @@ ENDLOCAL</Command>
       </ModuleDefinitionFile>
     </Link>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -593,32 +551,25 @@ ENDLOCAL</Command>
       </ModuleDefinitionFile>
     </Link>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
@@ -658,32 +609,25 @@ ENDLOCAL</Command>
       </ModuleDefinitionFile>
     </Link>
     <PreBuildEvent>
-      <Command>ECHO ON
-SETLOCAL EnableDelayedExpansion EnableExtensions
+      <Command>ECHO OFF
 
 IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
   DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
 )
 
-IF EXIST "$(OutDir)..\..\include\$(ProjectName)-1.5" (
-  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
-ENDLOCAL
-</Command>
+IF EXIST "$(OutDir)..\..\include\$(ProjectName)-2.1" (
+  RD /s /q "$(OutDir)..\..\include\$(ProjectName)-2.1"
+)</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>ECHO OFF
+      <Command>ECHO ON
 SETLOCAL EnableDelayedExpansion EnableExtensions
 
 MKDIR "$(OutDir)..\..\include"
-MKDIR "$(OutDir)..\..\include\$(ProjectName)-1.5"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)-2.1"
 
-FOR %%H IN (openjpeg.h) DO (
-  SET "_HEADER=%%H"
-  COPY "$(ProjectDir)..\..\src\lib\openmj2\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)-1.5"
-)
-
+COPY "$(ProjectDir)..\..\src\lib\openjp2\openjpeg.h" "$(OutDir)..\..\include\$(ProjectName)-2.1"
+  
 MKDIR "$(OutDir)..\..\licenses"
 COPY "$(ProjectDir)..\..\LICENSE" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
 
